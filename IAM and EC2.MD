@@ -12,7 +12,7 @@
 - You can define Security Group within an EC2 instance. Security Group let a specific public IP's to access the EC2 instance. Even instances created within your AWS account, you still need define Security Group so they could talk to each others. 
 - Amazon AMI let you create you custom EC2 VMs with pre-defined configs for faster bootups for later uses.  
 
-### EC2 Block Storage
+### Elastic Block Storage
 - An EBS (Elastic Block Store) Volume is a network drive you can attach to your instance while they run.
 - It allows your instances to persist data, even after the instance's termination.
 - Can only be mounted to one instance at a time (An EBS volume is bounded to a specific avalability zone) (To move across AZ, you must snapshot the volume)
@@ -24,3 +24,11 @@
 ### EC2 Instance Storage
 
 <img width="1082" alt="image" src="https://user-images.githubusercontent.com/59940078/207056061-3de4da1a-608c-4403-accf-972647ab68ea.png">
+
+### Elastic File System (based-on NFS (Network File System))
+- Works across AZ unlike EBS. Can be mounted to multiple instances at once (just like an NFS)
+- Use cases: Content Management, Web Serving, Data Sharing ...
+
+Cons:
+- Posix file system, only works on Linux or Mac.
+- 3 times as expensive compared to EBS.
